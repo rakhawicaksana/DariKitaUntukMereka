@@ -21,22 +21,30 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 50px;
     background: rgba(0,0,0,0.7);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-sizing: border-box;
 }
 
 .navbar h2 {
     color: #c0c0c0;
+    margin: 0;
 }
 
 .navbar a {
     color: #ccc;
     margin-left: 20px;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: white;
 }
 
 /* HERO */
@@ -47,7 +55,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: 80px;
+    padding: 80px 20px 0;
 }
 
 h1 {
@@ -99,6 +107,21 @@ h1 {
     box-shadow: 0 0 15px rgba(255,255,255,0.1);
 }
 
+/* CONTACT */
+.contact-box {
+    max-width: 700px;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.08);
+}
+
+.contact-box p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
 /* FOOTER */
 .footer {
     background: #111;
@@ -107,73 +130,89 @@ h1 {
     color: #777;
 }
 </style>
-
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <div class="navbar">
-    <h2>DariKita</h2>
+    <h2>DariKitaUntukMereka</h2>
+
     <div>
         <a href="#">Beranda</a>
         <a href="#tentang">Tentang</a>
         <a href="#fitur">Donasi</a>
+        <a href="#contact">Contact</a>
     </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
     <h1>DariKitaUntukMereka</h1>
-    <p>Barang lama yang tak terpakai bisa menjadi harapan baru bagi mereka yang membutuhkan.</p>
 
-    <!-- TOMBOL SUDAH FIX -->
+    <p>
+        Barang lama yang tak terpakai bisa menjadi harapan baru 
+        bagi mereka yang membutuhkan.
+    </p>
+
     <a href="mulai.html" class="btn">Mulai Donasi</a>
 </section>
 
 <!-- FITUR -->
 <section class="section" id="fitur">
     <h2>Kenapa Donasi di Sini?</h2>
+
     <div class="cards">
+
         <div class="card">
             <h3>Mudah</h3>
             <p>Proses donasi cepat dan praktis.</p>
         </div>
+
         <div class="card">
             <h3>Tepat Sasaran</h3>
             <p>Barang langsung ke yang membutuhkan.</p>
         </div>
+
         <div class="card">
             <h3>Transparan</h3>
             <p>Anda bisa melihat penyaluran donasi.</p>
         </div>
+
     </div>
 </section>
 
 <!-- CARA KERJA -->
 <section class="section">
     <h2>Cara Kerja</h2>
+
     <div class="cards">
+
         <div class="card">
             <h3>1. Upload Barang</h3>
             <p>Masukkan barang yang ingin didonasikan.</p>
         </div>
+
         <div class="card">
             <h3>2. Kami Proses</h3>
             <p>Kami sortir dan distribusikan.</p>
         </div>
+
         <div class="card">
             <h3>3. Sampai Tujuan</h3>
             <p>Barang sampai ke penerima.</p>
         </div>
+
     </div>
 </section>
 
 <!-- TENTANG -->
 <section class="section" id="tentang" style="background:#0f0f0f;">
     <h2>Tentang Kami</h2>
+
     <p style="max-width:600px;margin:20px auto;color:#aaa;">
-        DariKitaUntukMereka adalah platform donasi barang bekas yang menghubungkan orang yang memiliki barang tak terpakai
+        DariKitaUntukMereka adalah platform donasi barang bekas 
+        yang menghubungkan orang yang memiliki barang tak terpakai
         dengan mereka yang benar-benar membutuhkan.
     </p>
 </section>
@@ -183,6 +222,7 @@ h1 {
     <h2>Dampak yang Sudah Terjadi</h2>
 
     <div class="cards">
+
         <div class="card">
             <h3>+1.200</h3>
             <p>Barang tersalurkan</p>
@@ -197,19 +237,48 @@ h1 {
             <h3>+300</h3>
             <p>Donatur aktif</p>
         </div>
+
     </div>
 </section>
 
 <!-- CALL TO ACTION -->
 <section class="section">
     <h2>Mulai Perubahan Hari Ini</h2>
+
     <p style="color:#aaa;max-width:500px;margin:auto;">
-        Jangan biarkan barangmu menjadi tidak berguna. Ubah menjadi harapan untuk orang lain.
+        Jangan biarkan barangmu menjadi tidak berguna. 
+        Ubah menjadi harapan untuk orang lain.
     </p>
 
-    <a href="#fitur" class="btn" style="margin-top:30px;">
+    <a href="mulai.html" class="btn">
         Donasi Sekarang
     </a>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact" style="background:#0f0f0f;">
+
+    <div class="contact-box">
+
+        <h2>Hubungi Kami</h2>
+
+        <p>
+            Punya pertanyaan, saran, atau ingin bekerja sama 
+            dalam kegiatan sosial? Kami siap mendengarkan dan 
+            membantu kamu.
+        </p>
+
+        <p>
+            Bersama, kita bisa menciptakan lebih banyak 
+            harapan untuk mereka yang membutuhkan.
+        </p>
+
+        <a href="contact.html" class="btn">
+            Lanjut ke Contact
+        </a>
+
+    </div>
+
 </section>
 
 <!-- FOOTER -->

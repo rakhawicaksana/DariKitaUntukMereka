@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - DariKitaUntukMereka</title>
+
+<style>
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+    font-family:'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #000000, #434343);
+    color:#e0e0e0;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    box-sizing:border-box;
+}
+
+.navbar h2{
+    margin:0;
+    color:#c0c0c0;
+}
+
+.navbar a{
+    color:#ccc;
+    text-decoration:none;
+    margin-left:20px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:white;
+}
+
+/* CONTACT SECTION */
+.contact-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 20px 50px;
+}
+
+.contact-box{
+    width:100%;
+    max-width:700px;
+    background:#1a1a1a;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(255,255,255,0.08);
+}
+
+.contact-box h1{
+    text-align:center;
+    color:#c0c0c0;
+    margin-bottom:10px;
+}
+
+.contact-box p{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:35px;
+    line-height:1.7;
+}
+
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#2a2a2a;
+    color:white;
+    font-size:16px;
+    outline:none;
+}
+
+textarea{
+    resize:none;
+    height:140px;
+}
+
+/* BUTTON */
+.btn{
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background: linear-gradient(45deg, #c0c0c0, #f5f5f5);
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+}
+
+.btn:hover{
+    transform:scale(1.03);
+}
+
+/* INFO */
+.contact-info{
+    margin-top:35px;
+    text-align:center;
+    color:#999;
+    line-height:1.8;
+}
+
+/* FOOTER */
+.footer{
+    background:#111;
+    padding:20px;
+    text-align:center;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>DariKitaUntukMereka</h2>
+
+    <div>
+        <a href="index.html">Beranda</a>
+        <a href="index.html#tentang">Tentang</a>
+        <a href="index.html#fitur">Donasi</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact-section">
+
+    <div class="contact-box">
+
+        <h1>Hubungi Kami</h1>
+
+        <p>
+            Kami siap membantu dan mendengarkan setiap pertanyaan, 
+            masukan, maupun kerja sama sosial dari kamu.
+        </p>
+
+        <!-- FORM -->
+        <form>
+
+            <input type="text" placeholder="Nama Lengkap" required>
+
+            <input type="email" placeholder="Email" required>
+
+            <textarea placeholder="Tulis pesan kamu di sini..." required></textarea>
+
+            <button type="submit" class="btn">
+                Kirim Pesan
+            </button>
+
+        </form>
+
+        <!-- INFO -->
+        <div class="contact-info">
+            <p>Email : support@darikitauntukmereka.com</p>
+            <p>Instagram : @darikitauntukmereka</p>
+            <p>WhatsApp : +62 813-2983-0979</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 DariKitaUntukMereka</p>
+</div>
+
+</body>
+</html>
