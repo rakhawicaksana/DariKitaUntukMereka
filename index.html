@@ -6,6 +6,10 @@
 <title>DariKitaUntukMereka</title>
 
 <style>
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -21,6 +25,8 @@ body {
     background: rgba(0,0,0,0.7);
     position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar h2 {
@@ -41,8 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    animation: fadeIn 1.5s ease-in;
+    padding-top: 80px;
 }
 
 h1 {
@@ -55,14 +60,22 @@ h1 {
     color: #aaa;
 }
 
+/* BUTTON */
 .btn {
+    display: inline-block;
     margin-top: 25px;
     padding: 12px 30px;
     background: linear-gradient(45deg, #c0c0c0, #f5f5f5);
     color: black;
     border-radius: 30px;
     cursor: pointer;
-    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
 }
 
 /* SECTION */
@@ -93,11 +106,6 @@ h1 {
     text-align: center;
     color: #777;
 }
-
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
 </style>
 
 </head>
@@ -109,8 +117,8 @@ h1 {
     <h2>DariKita</h2>
     <div>
         <a href="#">Beranda</a>
-        <a href="#">Tentang</a>
-        <a href="#">Donasi</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#fitur">Donasi</a>
     </div>
 </div>
 
@@ -118,11 +126,13 @@ h1 {
 <section class="hero">
     <h1>DariKitaUntukMereka</h1>
     <p>Barang lama yang tak terpakai bisa menjadi harapan baru bagi mereka yang membutuhkan.</p>
-    <button class="btn">Mulai Donasi</button>
+
+    <!-- TOMBOL SUDAH FIX -->
+    <a href="mulai.html" class="btn">Mulai Donasi</a>
 </section>
 
 <!-- FITUR -->
-<section class="section">
+<section class="section" id="fitur">
     <h2>Kenapa Donasi di Sini?</h2>
     <div class="cards">
         <div class="card">
@@ -157,6 +167,49 @@ h1 {
             <p>Barang sampai ke penerima.</p>
         </div>
     </div>
+</section>
+
+<!-- TENTANG -->
+<section class="section" id="tentang" style="background:#0f0f0f;">
+    <h2>Tentang Kami</h2>
+    <p style="max-width:600px;margin:20px auto;color:#aaa;">
+        DariKitaUntukMereka adalah platform donasi barang bekas yang menghubungkan orang yang memiliki barang tak terpakai
+        dengan mereka yang benar-benar membutuhkan.
+    </p>
+</section>
+
+<!-- IMPACT -->
+<section class="section" style="background:linear-gradient(to right, #111, #222);">
+    <h2>Dampak yang Sudah Terjadi</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>+1.200</h3>
+            <p>Barang tersalurkan</p>
+        </div>
+
+        <div class="card">
+            <h3>+850</h3>
+            <p>Penerima manfaat</p>
+        </div>
+
+        <div class="card">
+            <h3>+300</h3>
+            <p>Donatur aktif</p>
+        </div>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section class="section">
+    <h2>Mulai Perubahan Hari Ini</h2>
+    <p style="color:#aaa;max-width:500px;margin:auto;">
+        Jangan biarkan barangmu menjadi tidak berguna. Ubah menjadi harapan untuk orang lain.
+    </p>
+
+    <a href="#fitur" class="btn" style="margin-top:30px;">
+        Donasi Sekarang
+    </a>
 </section>
 
 <!-- FOOTER -->

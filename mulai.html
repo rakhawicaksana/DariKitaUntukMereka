@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mulai Donasi</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #000000, #434343);
+    color: #e0e0e0;
+}
+
+/* HEADER */
+.header {
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h2 {
+    color: #c0c0c0;
+}
+
+.header a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* CARD FORM */
+.form-box {
+    background: #1c1c1c;
+    padding: 30px;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* BUTTON */
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #c0c0c0, #f5f5f5);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <h2>DariKita</h2>
+    <a href="index.html">← Kembali</a>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <h1>Mulai Donasi</h1>
+    <p>Isi data barang yang ingin kamu donasikan</p>
+
+    <div class="form-box">
+        <input type="text" placeholder="Nama Barang">
+        <input type="text" placeholder="Lokasi">
+        <textarea placeholder="Deskripsi Barang"></textarea>
+
+        <button class="btn">Kirim Donasi</button>
+    </div>
+
+</div>
+
+</body>
+</html>
