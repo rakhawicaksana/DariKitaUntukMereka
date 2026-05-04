@@ -1,64 +1,168 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DariKitaUntukMereka</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #000000, #434343);
-            color: #e0e0e0;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DariKitaUntukMereka</title>
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #000000, #434343);
+    color: #e0e0e0;
+}
 
-        h1 {
-            font-size: 3em;
-            margin: 0;
-            color: #c0c0c0; /* silver */
-            letter-spacing: 2px;
-        }
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    width: 100%;
+}
 
-        p {
-            font-size: 1.2em;
-            margin-top: 10px;
-            color: #aaaaaa;
-        }
+.navbar h2 {
+    color: #c0c0c0;
+}
 
-        .btn {
-            margin-top: 25px;
-            padding: 12px 30px;
-            background: linear-gradient(45deg, #c0c0c0, #f5f5f5);
-            color: #000;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.navbar a {
+    color: #ccc;
+    margin-left: 20px;
+    text-decoration: none;
+}
 
-        .btn:hover {
-            background: linear-gradient(45deg, #ffffff, #c0c0c0);
-            transform: scale(1.05);
-        }
-    </style>
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    animation: fadeIn 1.5s ease-in;
+}
+
+h1 {
+    font-size: 3em;
+    color: #c0c0c0;
+}
+
+.hero p {
+    max-width: 500px;
+    color: #aaa;
+}
+
+.btn {
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #c0c0c0, #f5f5f5);
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 15px;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* FOOTER */
+.footer {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
 </head>
+
 <body>
 
-    <section class="hero">
-        <h1>DariKitaUntukMereka</h1>
-        <p>"Barang Lama, Harapan Baru:"</p>
-        <button class="btn">Mulai Donasi</button>
-    </section>
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>DariKita</h2>
+    <div>
+        <a href="#">Beranda</a>
+        <a href="#">Tentang</a>
+        <a href="#">Donasi</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>DariKitaUntukMereka</h1>
+    <p>Barang lama yang tak terpakai bisa menjadi harapan baru bagi mereka yang membutuhkan.</p>
+    <button class="btn">Mulai Donasi</button>
+</section>
+
+<!-- FITUR -->
+<section class="section">
+    <h2>Kenapa Donasi di Sini?</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Mudah</h3>
+            <p>Proses donasi cepat dan praktis.</p>
+        </div>
+        <div class="card">
+            <h3>Tepat Sasaran</h3>
+            <p>Barang langsung ke yang membutuhkan.</p>
+        </div>
+        <div class="card">
+            <h3>Transparan</h3>
+            <p>Anda bisa melihat penyaluran donasi.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CARA KERJA -->
+<section class="section">
+    <h2>Cara Kerja</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>1. Upload Barang</h3>
+            <p>Masukkan barang yang ingin didonasikan.</p>
+        </div>
+        <div class="card">
+            <h3>2. Kami Proses</h3>
+            <p>Kami sortir dan distribusikan.</p>
+        </div>
+        <div class="card">
+            <h3>3. Sampai Tujuan</h3>
+            <p>Barang sampai ke penerima.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 DariKitaUntukMereka</p>
+</div>
 
 </body>
 </html>
