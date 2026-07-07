@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hubungi Kami - Dari Kita Untuk Mereka</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        p {
+            color: #b3b3b3;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .btn-social {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        .btn-social i {
+            font-size: 1.3rem;
+        }
+
+        /* Warna khusus masing-masing platform */
+        .whatsapp {
+            background-color: #25D366;
+        }
+
+        .instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        }
+
+        .facebook {
+            background-color: #1877F2;
+        }
+
+        /* Efek saat tombol di-hover */
+        .btn-social:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #b3b3b3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hubungi Kami</h1>
+        <p>Silakan hubungi kami atau ikuti kegiatan sosial kami melalui platform media sosial di bawah ini. Kami siap melayani Anda.</p>
+
+        <div class="social-buttons">
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%2C%20saya%20ingin%20bertanya%20mengenai..." target="_blank" class="btn-social whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp resmi
+            </a>
+
+            <a href="https://instagram.com/username" target="_blank" class="btn-social instagram">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
+
+            <a href="https://facebook.com/username_atau_id" target="_blank" class="btn-social facebook">
+                <i class="fa-brands fa-facebook-f"></i> Facebook
+            </a>
+        </div>
+
+        <a href="index.html" class="back-link">← Kembali ke Beranda</a>
+    </div>
+
+</body>
+</html>
