@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -317,4 +318,325 @@ registerForm.addEventListener("submit", function(e){
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Daftar | Dari Kita Untuk Mereka</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:0;
+font-family:'Poppins',sans-serif;
+background:
+linear-gradient(
+135deg,
+#050505,
+#151515,
+#232323,
+#3d3d3d);
+color:#e8e8e8;
+padding:30px;
+}
+
+.back-home{
+position:fixed;
+top:25px;
+left:25px;
+color:#e8e8e8;
+text-decoration:none;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:8px;
+opacity:.8;
+transition:.3s;
+z-index:10;
+}
+
+.back-home:hover{
+opacity:1;
+}
+
+.container{
+width:1100px;
+max-width:100%;
+background:#fff;
+display:flex;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+animation:fade .8s ease;
+}
+
+@keyframes fade{
+from{ opacity:0; transform:translateY(30px); }
+to{ opacity:1; transform:translateY(0); }
+}
+
+.left{
+width:50%;
+background:url("https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1200&q=80") center center/cover;
+position:relative;
+}
+
+.left::before{
+content:"";
+position:absolute;
+top:0; left:0;
+width:100%; height:100%;
+background:#02070cbf;
+}
+
+.content{
+position:absolute;
+top:50%; left:50%;
+transform:translate(-50%,-50%);
+width:85%;
+text-align:center;
+color:white;
+z-index:2;
+}
+
+.logo{
+width:90px; height:90px;
+background:white;
+border-radius:50%;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+color:#000000;
+margin-bottom:25px;
+}
+
+.content h1{ font-size:38px; margin-bottom:15px; }
+.content p{ line-height:1.8; font-size:16px; margin-bottom:30px; }
+
+.stats{ display:flex; justify-content:space-around; margin-top:25px; }
+.stats div{ text-align:center; }
+.stats h2{ font-size:30px; }
+.stats span{ font-size:14px; }
+
+.right{
+width:50%;
+padding:60px;
+display:flex;
+align-items:center;
+}
+
+form{ width:100%; }
+form h2{ font-size:34px; color:#000000; margin-bottom:10px; }
+.subtitle{ color:#777; margin-bottom:35px; }
+
+.input-group{ position:relative; margin-bottom:22px; }
+.input-group i{ position:absolute; top:17px; left:18px; color:#777; }
+
+.input-group input{
+width:100%;
+padding:16px 50px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:15px;
+transition:.3s;
+outline:none;
+}
+
+.input-group input:focus{
+border-color:#000000;
+box-shadow:0 0 8px rgba(33,150,243,.3);
+}
+
+.eye{ position:absolute; top:17px; right:18px; cursor:pointer; color:#666; }
+
+button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+font-size:16px;
+font-weight:600;
+transition:.3s;
+}
+
+.login{ background:#000000; color:white; }
+.login:hover{ background:#000000; transform:translateY(-2px); }
+
+.or{ text-align:center; margin:25px 0; position:relative; }
+.or::before{
+content:"";
+position:absolute;
+width:100%; height:1px;
+background:#ddd;
+left:0; top:50%;
+}
+.or span{ background:white; padding:0 15px; position:relative; color:#888; }
+
+.google{ background:white; border:1px solid #ddd; }
+.google:hover{ background:#f5f5f5; }
+.google i{ color:#e53935; margin-right:10px; }
+
+.register{ margin-top:30px; text-align:center; }
+.register a{ color:#02070cbf; text-decoration:none; font-weight:600; }
+
+.form-message{
+display:none;
+background:rgba(0,0,0,.05);
+border:1px solid #ddd;
+color:#333;
+padding:12px 16px;
+border-radius:10px;
+margin-bottom:20px;
+font-size:14px;
+}
+.form-message.show{ display:block; }
+
+footer{ margin-top:30px; text-align:center; font-size:13px; color:#888; }
+
+@media(max-width:900px){
+.container{ flex-direction:column; }
+.left{ display:none; }
+.right{ width:100%; padding:40px 30px; }
+}
+
+</style>
+</head>
+<body>
+
+<a href="index.html" class="back-home"><i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda</a>
+
+<div class="container">
+
+<div class="left">
+<div class="content">
+<div class="logo"><i class="fa-solid fa-hand-holding-heart"></i></div>
+<h1>Dari Kita Untuk Mereka</h1>
+<p>
+Bergabunglah bersama ribuan donatur lain dan jadi bagian dari
+perubahan nyata bagi mereka yang membutuhkan.
+</p>
+<div class="stats">
+<div><h2>12K+</h2><span>Donatur</span></div>
+<div><h2>500+</h2><span>Program Sosial</span></div>
+<div><h2>50K+</h2><span>Penerima Manfaat</span></div>
+</div>
+</div>
+</div>
+
+<div class="right">
+<form action="proses_register.php" method="POST" id="registerForm">
+
+<h2>Buat Akun</h2>
+<p class="subtitle">Daftar untuk mulai berdonasi dan memantau bantuanmu.</p>
+
+<div class="form-message" id="formMessage"></div>
+
+<div class="input-group">
+<i class="fa-solid fa-user"></i>
+<input type="text" name="nama" placeholder="Nama Lengkap" required>
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-envelope"></i>
+<input type="email" name="email" placeholder="Masukkan Email" required>
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-lock"></i>
+<input type="password" id="password" name="password" placeholder="Buat Password" required>
+<span class="eye" id="togglePassword"><i class="fa-solid fa-eye"></i></span>
+</div>
+
+<div class="input-group">
+<i class="fa-solid fa-lock"></i>
+<input type="password" id="confirmPassword" name="confirm_password" placeholder="Ulangi Password" required>
+</div>
+
+<button class="login">Daftar</button>
+
+<div class="or"><span>ATAU</span></div>
+
+<button type="button" class="google">
+<i class="fab fa-google"></i>
+Daftar dengan Google
+</button>
+
+<div class="register">
+Sudah punya akun?
+<a href="login.html">Masuk di sini</a>
+</div>
+
+<footer>
+© 2026 Dari Kita Untuk Mereka
+<br>
+Berbagi Kebaikan, Menebar Harapan
+</footer>
+
+</form>
+</div>
+</div>
+
+<script>
+
+const password = document.getElementById("password");
+const toggle = document.getElementById("togglePassword");
+
+toggle.onclick = function(){
+    if(password.type === "password"){
+        password.type = "text";
+        toggle.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
+    } else {
+        password.type = "password";
+        toggle.innerHTML = '<i class="fa-solid fa-eye"></i>';
+    }
+}
+
+// CATATAN: proses_register.php belum dibuat. Form dicegat sementara
+// di sisi browser supaya tidak error 404 saat disubmit.
+const registerForm = document.getElementById("registerForm");
+const formMessage = document.getElementById("formMessage");
+const confirmPassword = document.getElementById("confirmPassword");
+
+registerForm.addEventListener("submit", function(e){
+    e.preventDefault();
+
+    if(password.value !== confirmPassword.value){
+        formMessage.textContent = "Password dan konfirmasi password tidak sama.";
+        formMessage.classList.add("show");
+        return;
+    }
+
+    formMessage.textContent = "Pendaftaran berhasil disimulasikan. Hubungkan proses_register.php ke database untuk fungsi daftar yang sesungguhnya.";
+    formMessage.classList.add("show");
+});
+
+</script>
+
+</body>
+>>>>>>> f2555aa2d7f1d93e31f7a816928578d88ecad372
 </html>
