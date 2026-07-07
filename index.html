@@ -911,57 +911,190 @@ h1 {
 <!-- ============================================================ -->
 <!-- TESTIMONI (BARU) -->
 <!-- ============================================================ -->
-<section class="section bg-transparan-section testimoni-bg" id="testimoni" style="background:#0f0f0f;">
-    <span class="section-label">Cerita Mereka</span>
-    <h2>Apa Kata Mereka?</h2>
+<!-- ===== KOMENTAR ===== -->
 
-    <div class="testimonial-grid">
-        <div class="testimonial-card">
-            <p class="quote">"Anak saya jadi punya seragam sekolah yang layak. Terima kasih untuk tim yang sudah mengantar langsung ke rumah."</p>
-            <div class="testimonial-author">
-                <div class="testimonial-avatar">S</div>
-                <div>
-                    <strong>Ibu Sari</strong>
-                    <span>Penerima Manfaat</span>
-                </div>
-            </div>
+<div class="comment-box">
+
+    <h3 style="margin-bottom:25px;text-align:center;color:#fff;">
+        💬 Tulis Komentar
+    </h3>
+
+    <input type="text" id="namaKomentar" placeholder="Nama Anda">
+
+    <select id="ratingKomentar">
+        <option value="★★★★★">★★★★★ Sangat Baik</option>
+        <option value="★★★★☆">★★★★☆ Baik</option>
+        <option value="★★★☆☆">★★★☆☆ Cukup</option>
+        <option value="★★☆☆☆">★★☆☆☆ Kurang</option>
+        <option value="★☆☆☆☆">★☆☆☆☆ Buruk</option>
+    </select>
+
+    <textarea
+        id="isiKomentar"
+        placeholder="Bagikan pengalaman Anda..."
+        rows="5"></textarea>
+
+    <button class="comment-btn" onclick="tambahKomentar()">
+        Kirim Komentar
+    </button>
+
+</div>
+
+<div class="comment-list" id="commentList"></div>
+
+<style>
+
+.comment-box{
+    max-width:800px;
+    margin:60px auto 0;
+    background:#181818;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+}
+
+.comment-box input,
+.comment-box select,
+.comment-box textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:18px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.08);
+    background:#242424;
+    color:#fff;
+    font-size:15px;
+    outline:none;
+}
+
+.comment-box textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+.comment-box input::placeholder,
+.comment-box textarea::placeholder{
+    color:#aaa;
+}
+
+.comment-btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#fff;
+    color:#111;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.comment-btn:hover{
+    background:#e8e8e8;
+}
+
+.comment-list{
+    max-width:800px;
+    margin:35px auto 0;
+}
+
+.comment-card{
+    background:#181818;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:25px;
+    margin-bottom:20px;
+}
+
+.comment-stars{
+    color:#FFD54F;
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+.comment-text{
+    color:#ddd;
+    line-height:1.7;
+}
+
+.comment-author{
+    display:flex;
+    align-items:center;
+    margin-top:20px;
+}
+
+.comment-avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#2b2b2b;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    margin-right:15px;
+}
+
+.comment-author span{
+    display:block;
+    color:#999;
+    font-size:14px;
+}
+
+</style>
+
+<script>
+
+function tambahKomentar(){
+
+    let nama=document.getElementById("namaKomentar").value.trim();
+    let rating=document.getElementById("ratingKomentar").value;
+    let isi=document.getElementById("isiKomentar").value.trim();
+
+    if(nama==="" || isi===""){
+        alert("Silakan isi nama dan komentar.");
+        return;
+    }
+
+    let html=`
+    <div class="comment-card">
+
+        <div class="comment-stars">${rating}</div>
+
+        <div class="comment-text">
+            "${isi}"
         </div>
 
-        <div class="testimonial-card">
-            <p class="quote">"Prosesnya gampang banget, tinggal isi form dan barang saya dijemput. Nggak nyangka bisa membantu sebanyak ini."</p>
-            <div class="testimonial-author">
-                <div class="testimonial-avatar">R</div>
-                <div>
-                    <strong>Rangga</strong>
-                    <span>Donatur</span>
-                </div>
+        <div class="comment-author">
+
+            <div class="comment-avatar">
+                ${nama.charAt(0).toUpperCase()}
             </div>
+
+            <div>
+                <strong>${nama}</strong>
+                <span>Pengunjung</span>
+            </div>
+
         </div>
 
-        <div class="testimonial-card">
-            <p class="quote">"Panti kami menerima buku dan pakaian secara rutin dari platform ini. Sangat membantu kegiatan belajar anak-anak."</p>
-            <div class="testimonial-author">
-                <div class="testimonial-avatar">P</div>
-                <div>
-                    <strong>Pengurus Panti Kasih Bunda</strong>
-                    <span>Mitra Penyaluran</span>
-                </div>
-            </div>
-        </div>
     </div>
-</section>
+    `;
 
-<section class="section">
-    <h2>Mulai Perubahan Hari Ini</h2>
+    document.getElementById("commentList").innerHTML =
+        html + document.getElementById("commentList").innerHTML;
 
-    <p style="color:#aaa;max-width:500px;margin:auto;">
-        Jangan biarkan barangmu menjadi tidak berguna.
-        Ubah menjadi harapan untuk orang lain.
-    </p>
+    document.getElementById("namaKomentar").value="";
+    document.getElementById("isiKomentar").value="";
+    document.getElementById("ratingKomentar").selectedIndex=0;
 
-    <a href="#donasi" class="btn">Donasi Sekarang</a>
-</section>
+}
 
+</script>
+
+</script>
 <!-- ============================================================ -->
 <!-- FAQ (BARU) -->
 <!-- ============================================================ -->
