@@ -8,7 +8,9 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤍</text></svg>">
 
 <style>
-
+/* ============================================================ */
+/* RESET & BASE */
+/* ============================================================ */
 * { box-sizing: border-box; }
 
 html {
@@ -23,6 +25,10 @@ body {
 }
 
 h1, h2, h3 { font-family: 'Segoe UI', sans-serif; }
+
+/* ============================================================ */
+/* NAVBAR */
+/* ============================================================ */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -122,6 +128,9 @@ h1, h2, h3 { font-family: 'Segoe UI', sans-serif; }
     }
 }
 
+/* ============================================================ */
+/* BACKGROUND TRANSPARAN PADA SECTION */
+/* ============================================================ */
 .bg-transparan-section {
     position: relative;
     overflow: hidden;
@@ -191,6 +200,9 @@ h1 {
     justify-content: center;
 }
 
+/* ============================================================ */
+/* BUTTON */
+/* ============================================================ */
 .btn {
     display: inline-block;
     padding: 12px 30px;
@@ -536,6 +548,184 @@ h1 {
 .testimonial-author span { color: #888; font-size: 0.8em; display: block; }
 
 /* ============================================================ */
+/* KEBUTUHAN MENDESAK (PROGRESS BAR) */
+/* ============================================================ */
+.needs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.need-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(255,255,255,0.08);
+}
+
+.need-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.need-card h4 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.need-tag {
+    background: rgba(192,192,192,0.12);
+    color: #ccc;
+    font-size: 0.75em;
+    padding: 4px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.need-card p.need-desc {
+    color: #999;
+    font-size: 0.9em;
+    margin: 0 0 18px;
+    line-height: 1.5;
+}
+
+.progress-track {
+    width: 100%;
+    height: 10px;
+    background: #2c2c2c;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #888, #f5f5f5);
+    transition: width 1.2s ease;
+}
+
+.progress-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.progress-meta strong { color: #fff; }
+
+/* ============================================================ */
+/* GALERI SEBELUM - SESUDAH */
+/* ============================================================ */
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.ba-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255,255,255,0.08);
+}
+
+.ba-compare {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+.ba-compare img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+.ba-compare .ba-after {
+    clip-path: inset(0 0 0 50%);
+}
+
+.ba-label {
+    position: absolute;
+    top: 12px;
+    padding: 4px 12px;
+    font-size: 0.75em;
+    font-weight: bold;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.ba-label.label-before { left: 12px; }
+.ba-label.label-after { right: 12px; }
+
+.ba-slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.ba-slider-handle::after {
+    content: "⇔";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    color: #111;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.ba-info {
+    padding: 16px 18px;
+}
+
+.ba-info h4 {
+    margin: 0 0 5px;
+    color: #fff;
+}
+
+.ba-info p {
+    margin: 0;
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* ============================================================ */
 /* FAQ */
 /* ============================================================ */
 .faq-list {
@@ -678,6 +868,7 @@ h1 {
         <a href="#beranda">Beranda</a>
         <a href="#tentang">Tentang</a>
         <a href="#galeri">Galeri</a>
+        <a href="#kebutuhan">Kebutuhan</a>
         <a href="#donasi">Donasi</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -805,6 +996,66 @@ h1 {
 </section>
 
 <!-- ============================================================ -->
+<!-- KEBUTUHAN MENDESAK / PROGRESS BAR (BARU) -->
+<!-- ============================================================ -->
+<section class="section" id="kebutuhan">
+    <span class="section-label">Butuh Bantuan</span>
+    <h2>Kebutuhan Mendesak Saat Ini</h2>
+    <p style="max-width:600px;margin:15px auto 0;color:#aaa;">
+        Beberapa mitra panti dan yayasan sedang membutuhkan barang berikut. Yuk bantu penuhi targetnya!
+    </p>
+
+    <div class="needs-grid">
+        <div class="need-card">
+            <div class="need-card-header">
+                <h4>Panti Kasih Bunda</h4>
+                <span class="need-tag">Pakaian Anak</span>
+            </div>
+            <p class="need-desc">Membutuhkan baju anak usia 5–10 tahun untuk 32 penghuni panti menjelang tahun ajaran baru.</p>
+            <div class="progress-track">
+                <div class="progress-fill" data-percent="64"></div>
+            </div>
+            <div class="progress-meta">
+                <span><strong>32</strong> / 50 potong</span>
+                <span>64% tercapai</span>
+            </div>
+        </div>
+
+        <div class="need-card">
+            <div class="need-card-header">
+                <h4>Yayasan Cahaya Ilmu</h4>
+                <span class="need-tag">Buku Pelajaran</span>
+            </div>
+            <p class="need-desc">Membutuhkan buku pelajaran SD-SMP untuk mendukung kegiatan belajar 40 anak binaan.</p>
+            <div class="progress-track">
+                <div class="progress-fill" data-percent="45"></div>
+            </div>
+            <div class="progress-meta">
+                <span><strong>27</strong> / 60 buku</span>
+                <span>45% tercapai</span>
+            </div>
+        </div>
+
+        <div class="need-card">
+            <div class="need-card-header">
+                <h4>Posko Bencana Kendal</h4>
+                <span class="need-tag">Kebutuhan Darurat</span>
+            </div>
+            <p class="need-desc">Membutuhkan selimut, pakaian layak pakai, dan alat rumah tangga dasar untuk warga terdampak banjir.</p>
+            <div class="progress-track">
+                <div class="progress-fill" data-percent="20"></div>
+            </div>
+            <div class="progress-meta">
+                <span><strong>16</strong> / 80 item</span>
+                <span>20% tercapai</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#donasi" class="btn" style="margin-top:35px;">Bantu Penuhi Kebutuhan Ini</a>
+</section>
+
+<!-- ============================================================ -->
 <!-- FORM DONASI (BARU) -->
 <!-- ============================================================ -->
 <section class="section bg-transparan-section donasi-bg" id="donasi">
@@ -911,190 +1162,98 @@ h1 {
 <!-- ============================================================ -->
 <!-- TESTIMONI (BARU) -->
 <!-- ============================================================ -->
-<!-- ===== KOMENTAR ===== -->
+<section class="section bg-transparan-section testimoni-bg" id="testimoni" style="background:#0f0f0f;">
+    <span class="section-label">Cerita Mereka</span>
+    <h2>Apa Kata Mereka?</h2>
 
-<div class="comment-box">
-
-    <h3 style="margin-bottom:25px;text-align:center;color:#fff;">
-        💬 Tulis Komentar
-    </h3>
-
-    <input type="text" id="namaKomentar" placeholder="Nama Anda">
-
-    <select id="ratingKomentar">
-        <option value="★★★★★">★★★★★ Sangat Baik</option>
-        <option value="★★★★☆">★★★★☆ Baik</option>
-        <option value="★★★☆☆">★★★☆☆ Cukup</option>
-        <option value="★★☆☆☆">★★☆☆☆ Kurang</option>
-        <option value="★☆☆☆☆">★☆☆☆☆ Buruk</option>
-    </select>
-
-    <textarea
-        id="isiKomentar"
-        placeholder="Bagikan pengalaman Anda..."
-        rows="5"></textarea>
-
-    <button class="comment-btn" onclick="tambahKomentar()">
-        Kirim Komentar
-    </button>
-
-</div>
-
-<div class="comment-list" id="commentList"></div>
-
-<style>
-
-.comment-box{
-    max-width:800px;
-    margin:60px auto 0;
-    background:#181818;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:30px;
-}
-
-.comment-box input,
-.comment-box select,
-.comment-box textarea{
-    width:100%;
-    padding:15px;
-    margin-bottom:18px;
-    border-radius:12px;
-    border:1px solid rgba(255,255,255,.08);
-    background:#242424;
-    color:#fff;
-    font-size:15px;
-    outline:none;
-}
-
-.comment-box textarea{
-    resize:vertical;
-    min-height:130px;
-}
-
-.comment-box input::placeholder,
-.comment-box textarea::placeholder{
-    color:#aaa;
-}
-
-.comment-btn{
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    background:#fff;
-    color:#111;
-    font-size:16px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.comment-btn:hover{
-    background:#e8e8e8;
-}
-
-.comment-list{
-    max-width:800px;
-    margin:35px auto 0;
-}
-
-.comment-card{
-    background:#181818;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:18px;
-    padding:25px;
-    margin-bottom:20px;
-}
-
-.comment-stars{
-    color:#FFD54F;
-    margin-bottom:12px;
-    font-size:18px;
-}
-
-.comment-text{
-    color:#ddd;
-    line-height:1.7;
-}
-
-.comment-author{
-    display:flex;
-    align-items:center;
-    margin-top:20px;
-}
-
-.comment-avatar{
-    width:50px;
-    height:50px;
-    border-radius:50%;
-    background:#2b2b2b;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
-    margin-right:15px;
-}
-
-.comment-author span{
-    display:block;
-    color:#999;
-    font-size:14px;
-}
-
-</style>
-
-<script>
-
-function tambahKomentar(){
-
-    let nama=document.getElementById("namaKomentar").value.trim();
-    let rating=document.getElementById("ratingKomentar").value;
-    let isi=document.getElementById("isiKomentar").value.trim();
-
-    if(nama==="" || isi===""){
-        alert("Silakan isi nama dan komentar.");
-        return;
-    }
-
-    let html=`
-    <div class="comment-card">
-
-        <div class="comment-stars">${rating}</div>
-
-        <div class="comment-text">
-            "${isi}"
+    <div class="testimonial-grid">
+        <div class="testimonial-card">
+            <p class="quote">"Anak saya jadi punya seragam sekolah yang layak. Terima kasih untuk tim yang sudah mengantar langsung ke rumah."</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">S</div>
+                <div>
+                    <strong>Ibu Sari</strong>
+                    <span>Penerima Manfaat</span>
+                </div>
+            </div>
         </div>
 
-        <div class="comment-author">
-
-            <div class="comment-avatar">
-                ${nama.charAt(0).toUpperCase()}
+        <div class="testimonial-card">
+            <p class="quote">"Prosesnya gampang banget, tinggal isi form dan barang saya dijemput. Nggak nyangka bisa membantu sebanyak ini."</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">R</div>
+                <div>
+                    <strong>Rangga</strong>
+                    <span>Donatur</span>
+                </div>
             </div>
-
-            <div>
-                <strong>${nama}</strong>
-                <span>Pengunjung</span>
-            </div>
-
         </div>
 
+        <div class="testimonial-card">
+            <p class="quote">"Panti kami menerima buku dan pakaian secara rutin dari platform ini. Sangat membantu kegiatan belajar anak-anak."</p>
+            <div class="testimonial-author">
+                <div class="testimonial-avatar">P</div>
+                <div>
+                    <strong>Pengurus Panti Kasih Bunda</strong>
+                    <span>Mitra Penyaluran</span>
+                </div>
+            </div>
+        </div>
     </div>
-    `;
+</section>
 
-    document.getElementById("commentList").innerHTML =
-        html + document.getElementById("commentList").innerHTML;
+<!-- ============================================================ -->
+<!-- GALERI SEBELUM - SESUDAH (BARU) -->
+<!-- ============================================================ -->
+<section class="section" id="sebelum-sesudah">
+    <span class="section-label">Bukti Nyata</span>
+    <h2>Momen Sebelum & Sesudah</h2>
+    <p style="max-width:600px;margin:15px auto 0;color:#aaa;">
+        Geser gambar untuk melihat perbandingan sebelum barang diterima dan sesudah disalurkan ke penerima manfaat.
+    </p>
 
-    document.getElementById("namaKomentar").value="";
-    document.getElementById("isiKomentar").value="";
-    document.getElementById("ratingKomentar").selectedIndex=0;
+    <div class="before-after-grid">
+        <div class="ba-card">
+            <div class="ba-compare">
+                <span class="ba-label label-before">SEBELUM</span>
+                <span class="ba-label label-after">SESUDAH</span>
+                <img class="ba-before" src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=600" alt="Sebelum donasi disalurkan">
+                <img class="ba-after" src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600" alt="Sesudah donasi disalurkan ke anak-anak">
+                <div class="ba-slider-handle"></div>
+            </div>
+            <div class="ba-info">
+                <h4>Penyaluran Pakaian Anak</h4>
+                <p>Panti Kasih Bunda · Juni 2026</p>
+            </div>
+        </div>
 
-}
+        <div class="ba-card">
+            <div class="ba-compare">
+                <span class="ba-label label-before">SEBELUM</span>
+                <span class="ba-label label-after">SESUDAH</span>
+                <img class="ba-before" src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?q=80&w=600" alt="Buku sebelum disalurkan">
+                <img class="ba-after" src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=600" alt="Buku sesudah diterima anak-anak">
+                <div class="ba-slider-handle"></div>
+            </div>
+            <div class="ba-info">
+                <h4>Penyaluran Buku Pelajaran</h4>
+                <p>Yayasan Cahaya Ilmu · Mei 2026</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-</script>
+<section class="section">
+    <h2>Mulai Perubahan Hari Ini</h2>
 
-</script>
+    <p style="color:#aaa;max-width:500px;margin:auto;">
+        Jangan biarkan barangmu menjadi tidak berguna.
+        Ubah menjadi harapan untuk orang lain.
+    </p>
+
+    <a href="#donasi" class="btn">Donasi Sekarang</a>
+</section>
+
 <!-- ============================================================ -->
 <!-- FAQ (BARU) -->
 <!-- ============================================================ -->
@@ -1145,7 +1304,7 @@ function tambahKomentar(){
             harapan untuk mereka yang membutuhkan.
         </p>
 
-        <a href="contact.html" class="btn">Hubungi Kami</a>
+        <a href="mailto:halo@darikitauntukmereka.id" class="btn">Contact</a>
     </div>
 </section>
 
@@ -1212,6 +1371,55 @@ const statObserver = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.5 });
 
 statNumbers.forEach(el => statObserver.observe(el));
+
+// ================= ANIMASI PROGRESS BAR KEBUTUHAN =================
+const progressBars = document.querySelectorAll('.progress-fill');
+
+const progressObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const bar = entry.target;
+            const percent = bar.dataset.percent;
+            // beri jeda sedikit supaya transisi CSS terlihat jelas
+            requestAnimationFrame(() => {
+                bar.style.width = percent + '%';
+            });
+            observer.unobserve(bar);
+        }
+    });
+}, { threshold: 0.4 });
+
+progressBars.forEach(bar => progressObserver.observe(bar));
+
+// ================= SLIDER GALERI SEBELUM-SESUDAH =================
+document.querySelectorAll('.ba-compare').forEach(compare => {
+    const afterImg = compare.querySelector('.ba-after');
+    const handle = compare.querySelector('.ba-slider-handle');
+    let dragging = false;
+
+    const updateSlider = (clientX) => {
+        const rect = compare.getBoundingClientRect();
+        let percent = ((clientX - rect.left) / rect.width) * 100;
+        percent = Math.max(0, Math.min(100, percent));
+        afterImg.style.clipPath = `inset(0 0 0 ${percent}%)`;
+        handle.style.left = percent + '%';
+    };
+
+    // Mouse
+    compare.addEventListener('mousedown', () => { dragging = true; });
+    window.addEventListener('mouseup', () => { dragging = false; });
+    window.addEventListener('mousemove', (e) => {
+        if (dragging) updateSlider(e.clientX);
+    });
+    compare.addEventListener('click', (e) => updateSlider(e.clientX));
+
+    // Touch (HP)
+    compare.addEventListener('touchstart', () => { dragging = true; });
+    compare.addEventListener('touchend', () => { dragging = false; });
+    compare.addEventListener('touchmove', (e) => {
+        if (dragging && e.touches[0]) updateSlider(e.touches[0].clientX);
+    });
+});
 
 // ================= PREVIEW FOTO UPLOAD =================
 const fotoInput = document.getElementById('fotoBarang');
