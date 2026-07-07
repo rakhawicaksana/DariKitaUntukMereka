@@ -121,6 +121,62 @@ body {
     color: white;
 }
 
+/* ======================================================== */
+/* BACKGROUND TRANSPARAN PADA SECTION */
+/* ======================================================== */
+.bg-transparan-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Membuat lapisan gambar tipis di belakang konten */
+.bg-transparan-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.08; /* Mengatur ketipisan/transparansi gambar (0.08 = 8%) */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Memastikan konten utama tetap berada di atas gambar background */
+.bg-transparan-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Memberikan link gambar spesifik untuk tiap section */
+.hero-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200');
+}
+.fitur-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1200');
+}
+.cara-kerja-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1200');
+}
+.tentang-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1469571486010-0b3b2793c5dd?q=80&w=1200');
+}
+.impact-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=1200');
+}
+/* UPDATE: Penambahan link gambar untuk 3 section terakhir */
+.cta-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1200');
+}
+.contact-bg-section::before {
+    background-image: url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=1200');
+}
+.footer-bg::before {
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200');
+    opacity: 0.04; /* Khusus footer dibuat lebih tipis lagi agar teks info tetap kontras */
+}
+/* ======================================================== */
+
 /* HERO */
 .hero {
     height: 100vh;
@@ -181,14 +237,15 @@ h1 {
     box-shadow: 0 0 15px rgba(255,255,255,0.1);
 }
 
-/* CONTACT */
+/* CONTACT BOX */
 .contact-box {
     max-width: 700px;
     margin: auto;
-    background: #1a1a1a;
+    background: rgba(26, 26, 26, 0.85); /* Dibuat sedikit semi-transparan agar blending dengan bg */
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(255,255,255,0.08);
+    backdrop-filter: blur(5px); /* Efek blur halus di dalam kotak contact */
 }
 
 .contact-box p {
@@ -199,18 +256,15 @@ h1 {
 /* FOOTER */
 .footer {
     background: #111;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
     color: #777;
-
-
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <div class="navbar">
     <h2>DariKitaUntukMereka</h2>
 
@@ -222,8 +276,7 @@ h1 {
     </div>
 </div>
 
-<!-- HERO -->
-<section class="hero">
+<section class="hero bg-transparan-section hero-bg">
     <h1>DariKitaUntukMereka</h1>
 
     <p>
@@ -234,8 +287,7 @@ h1 {
     <a href="mulai.html" class="btn">Mulai Donasi</a>
 </section>
 
-<!-- FITUR -->
-<section class="section" id="fitur">
+<section class="section bg-transparan-section fitur-bg" id="fitur">
     <h2>Kenapa Donasi di Sini?</h2>
 
     <div class="cards">
@@ -258,9 +310,7 @@ h1 {
     </div>
 </section>
 
-<!-- CARA KERJA -->
-<section class="section">
-<section class="section" id="cara-kerja">
+<section class="section bg-transparan-section cara-kerja-bg" id="cara-kerja">
     <h2 style="margin-bottom: 40px; font-size: 2.5em;">Bagaimana Cara Kerjanya?</h2>
 
     <div class="cards">
@@ -294,10 +344,8 @@ h1 {
 
     </div>
 </section>
-</section>
 
-<!-- TENTANG -->
-<section class="section" id="tentang" style="background:#0f0f0f;">
+<section class="section bg-transparan-section tentang-bg" id="tentang" style="background:#0f0f0f;">
     <h2>Tentang Kami</h2>
 
     <p style="max-width:600px;margin:20px auto;color:#aaa;">
@@ -307,8 +355,7 @@ h1 {
     </p>
 </section>
 
-<!-- IMPACT -->
-<section class="section" style="background:linear-gradient(to right, #111, #222);">
+<section class="section bg-transparan-section impact-bg" style="background:linear-gradient(to right, #111, #222);">
     <h2>Dampak yang Sudah Terjadi</h2>
 
     <div class="cards">
@@ -331,8 +378,7 @@ h1 {
     </div>
 </section>
 
-<!-- CALL TO ACTION -->
-<section class="section">
+<section class="section bg-transparan-section cta-bg">
     <h2>Mulai Perubahan Hari Ini</h2>
 
     <p style="color:#aaa;max-width:500px;margin:auto;">
@@ -345,8 +391,7 @@ h1 {
     </a>
 </section>
 
-<!-- CONTACT -->
-<section class="section" id="contact" style="background:#0f0f0f;">
+<section class="section bg-transparan-section contact-bg-section" id="contact" style="background:#0f0f0f;">
 
     <div class="contact-box">
 
@@ -371,8 +416,7 @@ h1 {
 
 </section>
 
-<!-- FOOTER -->
-<div class="footer">
+<div class="footer bg-transparan-section footer-bg">
     <p>© 2026 DariKitaUntukMereka</p>
     <p>Kota Semarang, Jawa Tengah, Indonesia</p>
 </div>
