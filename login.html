@@ -422,15 +422,7 @@ toggle.onclick = function(){
   }
 }
 
-// Simulasi form submit sebelum backend (proses_login.php) siap
-const loginForm = document.getElementById("loginForm");
-const formMessage = document.getElementById("formMessage");
-
-loginForm.addEventListener("submit", function(e){
-    e.preventDefault();
-    formMessage.textContent = "Login berhasil disimulasikan. Hubungkan proses_login.php ke database untuk fungsi login yang sesungguhnya.";
-    formMessage.classList.add("show");
-});
+// Form sekarang dikirim langsung ke proses_login.php (tidak lagi disimulasikan)
 </script>
 
 </body>

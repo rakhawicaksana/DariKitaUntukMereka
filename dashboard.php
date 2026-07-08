@@ -11,7 +11,7 @@ if (!isset($_SESSION['login'])) {
     <title>Dashboard</title>
 </head>
 <body>
-    <h1>Selamat Datang, <?php echo $_SESSION['email']; ?>!</h1>
+    <h1>Selamat Datang, <?php echo htmlspecialchars($_SESSION['email']); ?>!</h1>
     <p>Kamu berhasil masuk ke sistem.</p>
     <a href="logout.php">Logout</a>
 </body>
