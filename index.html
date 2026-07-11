@@ -71,6 +71,7 @@ h1, h2, h3 { font-family: 'Segoe UI', sans-serif; }
     padding: 8px 20px;
     margin-left: 22px;
     font-weight: bold;
+    color: #000 !important;
 }
 
 .nav-toggle {
@@ -591,8 +592,19 @@ h1 {
 .need-card {
     background: #1a1a1a;
     border-radius: 15px;
-    padding: 25px;
+    overflow: hidden;
     box-shadow: 0 0 15px rgba(255,255,255,0.08);
+}
+
+.need-card-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.need-card-body {
+    padding: 25px;
 }
 
 .need-card-header {
@@ -1172,47 +1184,56 @@ h1 {
 
     <div class="needs-grid">
         <div class="need-card">
-            <div class="need-card-header">
-                <h4>Panti Kasih Bunda</h4>
-                <span class="need-tag">Pakaian Anak</span>
-            </div>
-            <p class="need-desc">Membutuhkan baju anak usia 5–10 tahun untuk 32 penghuni panti menjelang tahun ajaran baru.</p>
-            <div class="progress-track">
-                <div class="progress-fill" data-percent="64"></div>
-            </div>
-            <div class="progress-meta">
-                <span><strong>32</strong> / 50 potong</span>
-                <span>64% tercapai</span>
-            </div>
-        </div>
-
-        <div class="need-card">
-            <div class="need-card-header">
-                <h4>Yayasan Cahaya Ilmu</h4>
-                <span class="need-tag">Buku Pelajaran</span>
-            </div>
-            <p class="need-desc">Membutuhkan buku pelajaran SD-SMP untuk mendukung kegiatan belajar 40 anak binaan.</p>
-            <div class="progress-track">
-                <div class="progress-fill" data-percent="45"></div>
-            </div>
-            <div class="progress-meta">
-                <span><strong>27</strong> / 60 buku</span>
-                <span>45% tercapai</span>
+            <img class="need-card-img" src="https://images.unsplash.com/photo-1622218286192-95f6a20083c7?q=80&w=500" alt="Pakaian anak untuk Panti Kasih Bunda">
+            <div class="need-card-body">
+                <div class="need-card-header">
+                    <h4>Panti Kasih Bunda</h4>
+                    <span class="need-tag">Pakaian Anak</span>
+                </div>
+                <p class="need-desc">Membutuhkan baju anak usia 5–10 tahun untuk 32 penghuni panti menjelang tahun ajaran baru.</p>
+                <div class="progress-track">
+                    <div class="progress-fill" data-percent="64"></div>
+                </div>
+                <div class="progress-meta">
+                    <span><strong>32</strong> / 50 potong</span>
+                    <span>64% tercapai</span>
+                </div>
             </div>
         </div>
 
         <div class="need-card">
-            <div class="need-card-header">
-                <h4>Posko Bencana Kendal</h4>
-                <span class="need-tag">Kebutuhan Darurat</span>
+            <img class="need-card-img" src="https://images.unsplash.com/photo-1660606422342-2ce59709bb14?q=80&w=500" alt="Buku pelajaran untuk Yayasan Cahaya Ilmu">
+            <div class="need-card-body">
+                <div class="need-card-header">
+                    <h4>Yayasan Cahaya Ilmu</h4>
+                    <span class="need-tag">Buku Pelajaran</span>
+                </div>
+                <p class="need-desc">Membutuhkan buku pelajaran SD-SMP untuk mendukung kegiatan belajar 40 anak binaan.</p>
+                <div class="progress-track">
+                    <div class="progress-fill" data-percent="45"></div>
+                </div>
+                <div class="progress-meta">
+                    <span><strong>27</strong> / 60 buku</span>
+                    <span>45% tercapai</span>
+                </div>
             </div>
-            <p class="need-desc">Membutuhkan selimut, pakaian layak pakai, dan alat rumah tangga dasar untuk warga terdampak banjir.</p>
-            <div class="progress-track">
-                <div class="progress-fill" data-percent="20"></div>
-            </div>
-            <div class="progress-meta">
-                <span><strong>16</strong> / 80 item</span>
-                <span>20% tercapai</span>
+        </div>
+
+        <div class="need-card">
+            <img class="need-card-img" src="https://images.unsplash.com/photo-1677868805459-0a24053499f4?q=80&w=500" alt="Kebutuhan darurat untuk Posko Bencana Kendal">
+            <div class="need-card-body">
+                <div class="need-card-header">
+                    <h4>Posko Bencana Kendal</h4>
+                    <span class="need-tag">Kebutuhan Darurat</span>
+                </div>
+                <p class="need-desc">Membutuhkan selimut, pakaian layak pakai, dan alat rumah tangga dasar untuk warga terdampak banjir.</p>
+                <div class="progress-track">
+                    <div class="progress-fill" data-percent="20"></div>
+                </div>
+                <div class="progress-meta">
+                    <span><strong>16</strong> / 80 item</span>
+                    <span>20% tercapai</span>
+                </div>
             </div>
         </div>
     </div>
